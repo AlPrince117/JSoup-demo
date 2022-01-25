@@ -17,12 +17,13 @@ class Movie {
     var releaseDate: String = ""
 
     override fun toString(): String {
-        return "Movie(title='$title')"
+        return "Movie(title='$title') Release date= $releaseDate  Produced by- $producedBy"
     }
 
 }
 
 val wiki = "https://en.wikipedia.org"
+//https://en.wikipedia.org/wiki/List_of_films_with_a_100%25_rating_on_Rotten_Tomatoes
 
 fun main() {
     val doc = Jsoup.connect("$wiki/wiki/List_of_films_with_a_100%25_rating_on_Rotten_Tomatoes").get()    // <1>
